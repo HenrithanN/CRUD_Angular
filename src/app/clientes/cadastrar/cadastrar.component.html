@@ -1,0 +1,158 @@
+<div class="bg-dark p-1 mt-1 mb-1">
+  <h1 class="text-center text-white">Cadastrar Novo Cliente</h1>
+</div>
+<form [formGroup]="formCliente">
+   <!--DIV PAI-->
+   <div class="d-flex justify-content-end">
+    <!--DIV FILHA-->
+    <div>
+    <div class="row">
+      <!--Div Primeiro Nome-->
+      <div class="col-md-8">
+        <label class="mt-4" for="inputNome">Primeiro Nome</label>
+        <input id="inputNome"type="text" class="form-control" placeholder="Digite seu nome..." formControlName="nome">
+
+        <!--Primeiro Nome - Mensagens de Erro-->
+        <ul class="text-danger" *ngIf="formCliente.get('nome')?.touched">
+
+          <li *ngIf="formCliente.get('nome')?.errors?.required">
+          O Campo <b>Primeiro Nome</b> é obrigatório!
+          </li>
+          <li *ngIf="formCliente.get('nome')?.errors?.nomeInvalido">
+            Seu primeiro nome deve <b>começar</b> com letra maíuscula
+          </li>
+          <li *ngIf="formCliente.get('nome')?.errors?.caracteresEspeciais">
+            Seu primeiro nome Não deve conter números,espaços ou caracteres especiais!
+          </li>
+          <li *ngIf="formCliente.get('nome')?.errors?.minlength">
+            Seu primeiro nome deve conter no mínimo <b>3 Caracteres</b>!
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <!--Input Data-->
+        <label class="mt-4" for="inputData">Data</label>
+        <input id="inputData" mask="00/00/0000" type="text" class="form-control" placeholder="Informe Data 00/00/0000" formControlName="data">
+
+        <!--Data - Mensagens de Erro-->
+        <ul class="text-danger" *ngIf="formCliente.get('data')?.touched">
+          <li *ngIf="formCliente.get('data')?.errors?.required">
+            O Campo <b>Data</b> é obrigatório!
+          </li>
+          <li *ngIf="formCliente.get('data')?.errors?.dataFormatoInvalido">
+            O Campo <b>Data</b> deve estar no formato correto!
+          </li>
+        </ul>
+
+        <!--Input CPF-->
+        <label class="mt-4" for="inputCPF">CPF</label>
+        <input id="inputCPF"type="text" mask="000.000.000-00" class="form-control" placeholder="Digite seu CPF..." formControlName="cpf">
+        <!--CPF - Mensagens de Erro-->
+        <ul class="text-danger" *ngIf="formCliente.get('cpf')?.touched">
+          <li *ngIf="formCliente.get('cpf')?.errors?.required">
+            O Campo <b>CPF</b> é obrigatório!
+          </li>
+          <li *ngIf="formCliente.get('cpf')?.errors?.cpfInvalido">
+            O CPF informado é inválido!
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <!--Input Status-->
+
+        <label class="mt-4" for="selectStatus">Status</label>
+        <select id="selectStatus" class="form-select" formControlName="status">
+          <option>Cotação</option>
+          <option>Em Análise</option>
+          <option>Concluido</option>
+        </select>
+
+        <!--Status - Mensagens de Erro 01-->
+        <ul class="text-danger" *ngIf="formCliente.get('status')?.touched">
+          <li *ngIf="formCliente.get('status')?.errors?.required">
+            O Campo <b>Status</b> é obrigatório!
+          </li>
+        </ul>
+
+        <!--Input Plano-->
+        <label class="mt-4" for="selectPlano">Plano</label>
+        <select id="selectPlano" class="form-select" formControlName="plano">
+          <option>Seguro Vida Comum</option>
+          <option>Seguro de Carro</option>
+          <option>Seguro Vida Premium</option>
+        </select>
+        <!--Plano - Mensagens de Erro-->
+        <ul class="text-danger" *ngIf="formCliente.get('plano')?.touched">
+          <li *ngIf="formCliente.get('plano')?.errors?.required">
+          O Campo <b>Plano</b> é obrigatório!
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <!--DIV Numero-->
+      <div class="col-md-4">
+        <label class="mt-4" for="inputNome">Número:</label>
+        <input id="inputNome"type="text" class="form-control" placeholder="Digite o Numero..." formControlName="numero">
+
+        <!--Número - Mensagens de Erro-->
+        <ul class="text-danger" *ngIf="formCliente.get('numero')?.touched">
+          <li *ngIf="formCliente.get('numero')?.errors?.required">
+          O Campo <b>Número</b> é obrigatório!
+          </li>
+        </ul>
+      </div>
+
+      <!--DIV Prêmio-->
+      <div class="col-md-4">
+
+        <label class="mt-4" for="inputPremio">Prêmio:</label>
+        <input id="inputPremio" class="form-control" currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" formControlName="premio"/>
+
+        <!--Prêmio - Mensagens de Erro-->
+        <ul class="text-danger" *ngIf="formCliente.get('premio')?.touched">
+          <li *ngIf="formCliente.get('premio')?.errors?.required">
+          O Campo <b>Prêmio</b> é obrigatório!
+          </li>
+        </ul>
+      </div>
+
+      <!--DIV Angariador-->
+      <div class="col-md-8">
+        <label class="mt-4" for="inputAngariador">Angariador</label>
+        <input id="inputAngariador"type="text" class="form-control" placeholder="Digite o nome do Angariador..." formControlName="angariador">
+        <!--Angariador - Mensagens de Erro-->
+        <ul class="text-danger" *ngIf="formCliente.get('angariador')?.touched">
+
+          <li *ngIf="formCliente.get('angariador')?.errors?.required">
+          O Campo <b>Angariador</b> é obrigatório!
+          </li>
+          <li *ngIf="formCliente.get('angariador')?.errors?.nomeInvalido">
+            O nome do Angariador deve <b>começar</b> com letra maíuscula
+          </li>
+          <li *ngIf="formCliente.get('angariador')?.errors?.nomeInvalido">
+            O Nome do Angariador <b>não</b> deve conter números,espaços ou caracteres especiais!
+          </li>
+          <li *ngIf="formCliente.get('angariador')?.errors?.minlength">
+            O nome do Angariador deve conter no mínimo <b>3 Caracteres</b>!
+          </li>
+        </ul>
+      </div>
+      <!--DIV Botões-->
+      <div class="row mt-5 mb-3">
+        <button class="col-md-4 m-1 btn btn-primary" (click)="cadastrar()" [disabled]="formCliente.invalid">Cadastrar Novo Cliente</button>
+        <button class="col-md-4 m-1 btn btn-secondary" [routerLink]="['/clientes']">Voltar</button>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+</form>
+

@@ -1,0 +1,148 @@
+{
+  "clientes": [
+    {
+      "id": 2,
+      "nome": "Jonathanl",
+      "data": "01/02/2020",
+      "cpf": "12332112332",
+      "numero": "123",
+      "premio": "1000",
+      "angariador": "Teste",
+      "plano": "Seguro Vida Comum",
+      "status": "Em Análise"
+    },
+    {
+      "id": 3,
+      "nome": "JonathanN",
+      "data": "01/02/2020",
+      "cpf": "12332112332",
+      "numero": "123",
+      "premio": "1000",
+      "angariador": "Teste",
+      "plano": "Seguro Vida Premium",
+      "status": "Em Análise"
+    },
+    {
+      "id": 4,
+      "nome": "Chico",
+      "data": "10/03/2017",
+      "cpf": "97233685444",
+      "numero": "312312",
+      "premio": "321321",
+      "angariador": "Julio",
+      "plano": "Seguro de Carro",
+      "status": "Cotação"
+    },
+    {
+      "id": 5,
+      "nome": "31321",
+      "data": "15/12/2018",
+      "cpf": "32131232132",
+      "numero": "321312",
+      "premio": "321321",
+      "angariador": "31231231",
+      "plano": "Seguro de Carro",
+      "status": "Cotação"
+    },
+    {
+      "id": 6,
+      "nome": "batata",
+      "data": "20/02/2020",
+      "cpf": "32132131312",
+      "numero": "31231231",
+      "premio": "3231321",
+      "angariador": "32131312",
+      "plano": "Seguro Vida Comum",
+      "status": "Cotação"
+    },
+    {
+      "id": 7,
+      "nome": "231321321",
+      "data": "20/02/2019",
+      "cpf": "23121312312",
+      "numero": "321312",
+      "premio": "3231",
+      "angariador": "321",
+      "plano": "Seguro Vida Premium",
+      "status": "Cotação"
+    },
+    {
+      "nome": "testeCPFValido",
+      "data": "19/05/2020",
+      "cpf": "96453038340",
+      "numero": "123",
+      "premio": 1000,
+      "angariador": "Teste",
+      "plano": "Seguro Vida Comum",
+      "status": "Cotação",
+      "id": 9
+    },
+    {
+      "nome": "",
+      "data": "",
+      "cpf": "",
+      "numero": "",
+      "premio": "",
+      "angariador": "",
+      "plano": "",
+      "status": "",
+      "id": 11
+    },
+    {
+      "nome": "Usuario",
+      "data": "20/02/2020",
+      "cpf": "97233685444",
+      "numero": "321312",
+      "premio": 10,
+      "angariador": "Angariador",
+      "plano": "Seguro Vida Comum",
+      "status": "Cotação",
+      "id": 12
+    },
+    {
+      "nome": "Joaninha",
+      "data": "18/05/2021",
+      "cpf": "97233685444",
+      "numero": "12332",
+      "premio": 20,
+      "angariador": "Teste",
+      "plano": "Seguro Vida Comum",
+      "status": "Em Análise",
+      "id": 13
+    },
+    {
+      "id": 14,
+      "nome": "Teste",
+      "data": "20/02/2020",
+      "cpf": "97233685444",
+      "numero": "321312",
+      "premio": 1220,
+      "angariador": "Teste",
+      "plano": "Seguro de Carro",
+      "status": "Em Análise"
+    },
+    {
+      "nome": "Bbatata",
+      "data": "18/05/2021",
+      "cpf": "97233685444",
+      "numero": "321312",
+      "premio": 30,
+      "angariador": "Teste",
+      "plano": "Seguro Vida Comum",
+      "status": "Em Análise",
+      "id": 15
+    }
+  ],
+  "login": [
+    {
+      "id": 1,
+      "email": "admin@teste.com",
+      "senha": "admin123"
+    },
+    {
+      "email": "teste@teste.com",
+      "senha": "123321",
+      "id": 2
+    }
+  ]
+}

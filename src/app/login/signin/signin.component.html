@@ -1,0 +1,39 @@
+<div class="col-md-12">
+
+  <div class="col-md-4 m-5">
+    <form [formGroup]="formLogin">
+      <div class="form-group">
+        <label for="inputUsuario">Email:</label>
+        <input type="email" class="form-control" id="inputUsuario" placeholder="Digite seu nome de usuário" formControlName="email">
+      <!--Email - Mensagens de Erro-->
+      <ul class="text-danger" *ngIf="formLogin.get('email')?.touched">
+        <li *ngIf="formLogin.get('email')?.errors?.required">
+          O Campo <b>Email</b> é obrigatório!
+        </li>
+        <li *ngIf="formLogin.get('email')?.errors?.pattern">
+          Email inválido!
+        </li>
+      </ul>
+      </div>
+      <div class="form-group">
+        <label for="inputSenha">Senha</label>
+        <input type="password" class="form-control" id="inputSenha" placeholder="Digite sua senha" formControlName="senha">
+        <!--Senha - Mensagens de Erro-->
+        <ul class="text-danger" *ngIf="formLogin.get('senha')?.touched">
+          <li *ngIf="formLogin.get('senha')?.errors?.required">
+            O Campo <b>Senha</b> é obrigatório!
+          </li>
+          <li *ngIf="formLogin.get('senha')?.errors?.minlength">
+            Sua senha deve possuir no mínimo <b>6 caracteres</b> !
+          </li>
+        </ul>
+      </div>
+      <button class="btn btn-primary mt-2" (click)="login()">Login</button>
+      <!-- <button class="btn btn-primary mt-2" [routerLink]="['clientes']">Login</button> -->
+
+    </form>
+  </div>
+  <div class="row-md-6">
+  </div>
+<p class="text-info" [routerLink]="['signup']">Ainda não tem cadastro? Cadastre-se aqui!</p>
+</div>
